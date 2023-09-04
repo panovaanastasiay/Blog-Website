@@ -16,7 +16,7 @@
     font-style: normal;
   }
   
-  body, ul, h1, h2, h3, p {
+  body, ul, h1, h2, h3, h4, p {
     padding: 0;
     margin: 0;
   }
@@ -112,6 +112,7 @@
   
   .news {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 0 auto;
     margin-top: 45px;
@@ -226,27 +227,28 @@
     .news-content {
         display: flex;
         padding-top: 60px;
-        margin-right: 10%;
-        margin-left: 10%;
         
     }
   
     .news-articles {
       flex-grow: 1;
+      margin-left: 220px;
+      margin-right: 10px;
       }
 
     .posts-aside {
       width: 270px;
+      margin-right: 245px;
     }
   
   .news-info {
     margin-left: 30px;
   }
-  
+
   .news-item {
     display: flex;
-    margin-right: 120px;
   }
+  
   
   .news-item:nth-child( n + 2) {
     margin-top: 55px
@@ -565,29 +567,28 @@
 
   .our-products {
     margin-top: 64px; 
+    margin-left: 220px;
+    margin-right: 220px;
   }
 
   .all-products {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
   }
 
   .products {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    margin-top: 28px;
     max-width: 345px; 
   }
 
-  .product__content {
-    flex-grow: 1;
+  .products:nth-child(even) {
+    margin-right: 20px;
+    margin-left: 20px;
   }
-
 
   .product__body {
     border: 2px solid #d3c59d;
@@ -595,6 +596,7 @@
     align-items: end;
     padding-top: 25px;
     padding-left: 20px;
+    flex-grow: 1;
   }
 
   .product__title {
@@ -623,12 +625,11 @@
     padding-bottom: 40px;
   }
 
-  .product__price {
-    display: flex;
+  .cost {
     flex-direction: column;
+    display: flex;
   }
 
-  
   .product__price_old {
     text-decoration: line-through;
     font-family: OpenSans;
@@ -659,22 +660,27 @@
     font-size: 14px;
     text-transform: uppercase;
     color: #ffffff;
+    margin-right: 23px;
   }
   
   .social-media {
-    background-color: #f4f7f6;
+    
     margin-top: 64px;
-    margin-right: 10%;
-    margin-left: 10%;
-    width: 80%;
+    
+    width: 100%;
   }
+
   
   .social-list {
     display: flex;
     margin: 0 auto;
     padding-top: 31px;
     padding-bottom: 31px;
+    margin-right: 245px;
+    margin-left: 220px;
+    background-color: #f4f7f6;
     justify-content: center;
+    
   }
   
   .social-icon {
@@ -890,13 +896,13 @@ legend {
     display: none;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   .menu-btn {
     display: none;
   }
 }
 
-  @media (min-width: 641px) and (max-width: 1199px) {
+  @media (min-width: 641px) and (max-width: 1200px) {
     .welcome {
       background-image: url(../Images/banner-bg-tablet.jpg);
     }
@@ -911,8 +917,7 @@ legend {
     }
 
     .menu-btn {
-      padding-left: 4%;
-      padding-right: 4%;
+      padding-right: 34px;
       padding-top: 50px;
       width: 22px;
       height: 22px;
@@ -932,23 +937,43 @@ legend {
     }
 
     .news-content {
-      margin-right: 4%;
-      margin-left: 4%;
+      margin-right: 35px;
+      margin-left: 35px;
     }
 
     .news-item {
-        margin-right: 4%;
+        flex-direction: column;
+        
     }
 
-    .social-media {
-        margin-right: 4%;
-        margin-left: 4%;
-        width: 92%;
+    .news-articles {
+      margin-left: 35px;
+      margin-right: 33px;
+      }
+
+      .posts-aside {
+        margin-right: 33px;
+      }
+
+      .our-products {
+        margin-left: 35px;
+        margin-right: 35px;
+      }
+
+      .products:nth-child(even) {
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+
+    .social-list {
+        margin-right: 35px;
+        margin-left: 35px;
+        
       }
   }
 
-  @media (min-width: 641px) and (orientation: landscape) and (max-width: 1199px) {
-    .trend-content {
+  @media (min-width: 641px) and (orientation: landscape) and (max-width: 1200px) {
+    .trends-items {
       width: 25%;
     }
 
@@ -958,13 +983,101 @@ legend {
   }
 
 
-  @media (min-width: 641px) and (orientation: portrait) and (max-width: 1199px) {
-    .trend-content {
+  @media (min-width: 641px) and (orientation: portrait) and (max-width: 1200px) {
+    .trends-items {
       width: 50%;
     }
 
     .all-trends {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+
+    .welcome {
+      background-image: url(../Images/banner-mobile.jpg);
+    }
+
+    .welcome-title {
+      padding-top: 320px;
+      padding-bottom: 200px;
+    }
+
+    .menu-list {
+      display: none;
+    }
+
+    .menu-btn {
+      padding-right: 12px;
+      padding-top: 30px;
+      width: 22px;
+      height: 22px;
+      background: transparent;
+      border: none;
+    }
+
+    .logo {
+      width: 77%;
+      height: 52px;
+      padding-top: 233px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .container {
+      padding-left: 44px;
+      padding-right: 44px;
+    }
+
+    .news-content {
+      margin-right: 15px;
+      margin-left: 15px;
+      flex-direction: column;
+    }
+
+    .news-item {
+    flex-direction: column;
+        
+    }
+
+    .news-articles {
+      margin-left: 15px;
+      margin-right: 15px;
+      }
+
+    .posts-aside {
+      margin-right: 15px;
+      margin-left: 15px;
+      margin-top: 44px;
+    }
+
+    .our-products {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+      .products:nth-child(even) {
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+
+      .social-list {
+        margin-right: 15px;
+        margin-left: 15px;
+        
+      }
+  }
+
+  @media (max-width: 640px) and (orientation: portrait) {
+
+    .all-trends {
+      grid-template-columns: 1fr;
+    }
+
+    .trends-items {
+      width: 100%;
     }
   }
 
