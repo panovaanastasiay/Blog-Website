@@ -31,7 +31,7 @@
   }
   
   .welcome {
-    
+    justify-content: center;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -43,6 +43,7 @@
     margin: 0 auto;
     width: 100%;
     background-image: url(../Images/banner-bg.jpg);
+    text-align: center;
   }
   
   .welcome:after {
@@ -61,16 +62,18 @@
   .logo {
     min-width: 179px;
     padding-top: 30px;
+    
 }
     
   .container {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 245px;
-    padding-right: 245px;
+    display: inline-block
+    
   }
   
-  
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+  }
   
   .menu-list {
     display: flex;
@@ -95,8 +98,6 @@
   .welcome-title {
    
     line-height: 1.7;
-    padding-top: 190px;
-    padding-bottom: 140px;
     font-family: OpenSans;
     font-weight: 700;
     font-style: bold;
@@ -149,7 +150,7 @@
     opacity: 0.4;
     margin: 0 auto;
     margin-bottom: 27px;
-    margin-top: 15px;
+    
     }
   
     .all-trends {
@@ -168,7 +169,6 @@
       -moz-background-size: 100%; 
       -webkit-background-size: 100%;
       z-index: 0; 
-      margin: 0 auto;
       display: flex;
       align-items: end;
       
@@ -224,29 +224,36 @@
         
     }
 
+    .news-block {
+      display: inline-block;
+      margin: auto;
+  
+    }
+
     .news-content {
         display: flex;
-        padding-top: 60px;
-        
+        padding-top: 60px;  
+
     }
   
     .news-articles {
+      display: flex;
+      flex-direction: column;
       flex-grow: 1;
-      margin-left: 220px;
+      
       margin-right: 10px;
       }
 
     .posts-aside {
       width: 270px;
-      margin-right: 245px;
+      
     }
   
-  .news-info {
-    margin-left: 30px;
-  }
+  
 
   .news-item {
     display: flex;
+    flex-grow: 1;
   }
   
   
@@ -255,7 +262,7 @@
   }
   
   .news-photo {
-    width: 380px;
+    min-width: 380px;
     height: 295px; 
     background-color: #eff6f1;
   }
@@ -287,7 +294,7 @@
     color: #0f0d0e;
     text-transform: uppercase;
     line-height: 1.2;
-    width: 330px;
+    min-width: 330px;
     margin-top: 5px;
     margin-bottom: 35px;
   }
@@ -321,7 +328,6 @@
     font-style: normal;
     font-size: 15px;
     line-height: 1.5;
-    width: 370px;
     color: #0f0d0e;
   }
   
@@ -362,7 +368,7 @@
   }
   
   .news-photo-aside {
-    width: 70px;
+    min-width: 70px;
     height: 71px;
     background-color: #f4f7f6;
   }
@@ -391,7 +397,7 @@
     font-size: 14px;
     text-transform: uppercase;
     line-height: 1.3;
-    width: 182px;
+    min-width: 182px;
     margin-top: 10px;
   }
   
@@ -445,7 +451,7 @@
     background-size: 18px;
     background-position: center;
     height: 48px;
-    width: 50px;
+    min-width: 50px;
     border: none;
     margin-bottom: 30px;
   }
@@ -560,21 +566,28 @@
     position: absolute;
     right: 0px;
     bottom: -15px;
-    width: 270px;
+    min-width: 270px;
     height: 1px;
     background: #eeeeee;
   }
 
   .our-products {
     margin-top: 64px; 
-    margin-left: 220px;
-    margin-right: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    
   }
 
   .all-products {
     display: flex;
+    
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .product-block {
+    display: inline-block;
+    
   }
 
   .products {
@@ -586,8 +599,8 @@
   }
 
   .products:nth-child(even) {
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 70px;
+    margin-left: 70px;
   }
 
   .product__body {
@@ -685,7 +698,7 @@
   
   .social-icon {
     display: flex;
-    width: 20px;
+    min-width: 20px;
     height: 20px;
     background-position: center;
     background-size: cover;
@@ -897,45 +910,100 @@ legend {
 }
 
 @media (min-width: 1201px) {
+  
+  .welcome {
+    height: 450px;
+  }
+
   .menu-btn {
     display: none;
   }
+
+
+  .container {
+    max-width: 1201px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 245px;
+    padding-right: 245px;
+    
+  }
+
+  .menu {
+    margin-left: 521px;
+  }
+
+  .welcome-title {
+    padding-top: 100px;
+  }
+
+  .trend-header {
+    padding-top: 12px;
+  }
+
+  .news-info {
+    margin-left: 30px;
+  }
+
+  .product-block {
+    max-width: 1201px;
+  }
+
+  .all-products {
+    justify-content: center;
+  }
+
+  .news-block {
+    max-width: 1201px;
+  }
+
 }
 
-  @media (min-width: 641px) and (max-width: 1200px) {
+  @media (min-width: 641px) and (max-width:1200px) {
     .welcome {
       background-image: url(../Images/banner-bg-tablet.jpg);
+      
     }
 
     .welcome-title {
-      padding-top: 100px;
+      padding-top: 40px;
       padding-bottom: 125px;
     }
 
+    .container {
+      display: block;
+    }
+
     .menu-list {
-      display: none;
+    display: none;
+    }
+
+    menu{
+      margin-left: auto;
     }
 
     .menu-btn {
-      padding-right: 34px;
-      padding-top: 50px;
-      width: 22px;
-      height: 22px;
+    padding-top: 30px;
+    background: transparent;
+    border: none;
+    }
+
+    .menu-btn-svg {
+      width: 20px;
+      height: 20px;
       background: transparent;
-      border: none;
+      margin-left: auto;
     }
 
     .logo {
       min-width: 157px;
       height: 41px;
-      padding-top: 49px;
+      
+      
     }
 
-    .container {
-      padding-left: 75px;
-      padding-right: 75px;
-    }
-
+  
+    
     .news-content {
       margin-right: 35px;
       margin-left: 35px;
@@ -949,6 +1017,7 @@ legend {
     .news-articles {
       margin-left: 35px;
       margin-right: 33px;
+      display: inline-block;
       }
 
       .posts-aside {
@@ -973,9 +1042,7 @@ legend {
   }
 
   @media (min-width: 641px) and (orientation: landscape) and (max-width: 1200px) {
-    .trends-items {
-      width: 25%;
-    }
+    
 
     .all-trends {
       grid-template-columns: repeat(4, 1fr);
@@ -984,9 +1051,7 @@ legend {
 
 
   @media (min-width: 641px) and (orientation: portrait) and (max-width: 1200px) {
-    .trends-items {
-      width: 50%;
-    }
+    
 
     .all-trends {
       grid-template-columns: repeat(2, 1fr);
@@ -1000,19 +1065,35 @@ legend {
     }
 
     .welcome-title {
-      padding-top: 320px;
+      
       padding-bottom: 200px;
+      padding-top: 40px;
     }
 
+    .container{
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .menu-list {
       display: none;
     }
 
-    .menu-btn {
+    .menu{
+      display: flex;
+      order: 1;
+    }
+
+    .menu-btn-svg {
       padding-right: 12px;
       padding-top: 30px;
       width: 22px;
       height: 22px;
+      background: transparent;
+      border: none;
+    
+    }
+
+    .menu-btn {
       background: transparent;
       border: none;
     }
@@ -1026,10 +1107,6 @@ legend {
       margin-right: auto;
     }
 
-    .container {
-      padding-left: 44px;
-      padding-right: 44px;
-    }
 
     .news-content {
       margin-right: 15px;
@@ -1051,11 +1128,21 @@ legend {
       margin-right: 15px;
       margin-left: 15px;
       margin-top: 44px;
+      width: 100%;
+    }
+
+    .search-section {
+      display: flex;
+      width: 100%;
     }
 
     .our-products {
       margin-left: 15px;
       margin-right: 15px;
+    }
+
+    .all-products {
+      justify-content: center;
     }
 
       .products:nth-child(even) {
