@@ -922,8 +922,7 @@ legend {
 
   .container {
     max-width: 1201px;
-    display: flex;
-    justify-content: space-between;
+    
     padding-left: 245px;
     padding-right: 245px;
     
