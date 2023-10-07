@@ -263,7 +263,7 @@
   
   .news-photo {
     min-width: 380px;
-    height: 295px; 
+     
     background-color: #eff6f1;
   }
   
@@ -369,7 +369,7 @@
   
   .news-photo-aside {
     min-width: 70px;
-    height: 71px;
+    
     background-color: #f4f7f6;
   }
   
@@ -679,8 +679,7 @@
   .social-media {
     
     margin-top: 64px;
-    
-    width: 100%;
+
   }
 
   
@@ -689,8 +688,7 @@
     margin: 0 auto;
     padding-top: 31px;
     padding-bottom: 31px;
-    margin-right: 245px;
-    margin-left: 220px;
+    max-width: 1201px;
     background-color: #f4f7f6;
     justify-content: center;
     
@@ -921,11 +919,7 @@ legend {
 
 
   .container {
-    max-width: 1201px;
-    
-    padding-left: 245px;
-    padding-right: 245px;
-    
+    max-width: 1201px; 
   }
 
   .menu {
@@ -934,10 +928,21 @@ legend {
 
   .welcome-title {
     padding-top: 100px;
+  
   }
+
 
   .trend-header {
     padding-top: 12px;
+  }
+
+  .news-articles {
+    width: 775px;
+    margin-right: 120px;
+  }
+
+  .news-block {
+    margin: 0 auto;
   }
 
   .news-info {
@@ -971,6 +976,8 @@ legend {
 
     .container {
       display: block;
+      padding-left: 35px;
+      padding-right: 35px;
     }
 
     .menu-list {
@@ -1002,35 +1009,37 @@ legend {
     }
 
   
-    
-    .news-content {
-      margin-right: 35px;
-      margin-left: 35px;
-    }
-
     .news-item {
         flex-direction: column;
         
     }
 
     .news-articles {
-      margin-left: 35px;
-      margin-right: 33px;
+      
       display: inline-block;
+      padding-left: 35px;
+      padding-right: 35px;
       }
 
-      .posts-aside {
-        margin-right: 33px;
-      }
+    .posts-aside {
+      padding-right: 35px;
+    }
 
       .our-products {
-        margin-left: 35px;
-        margin-right: 35px;
+        padding-left: 35px;
+        padding-right: 35px;
+        
       }
 
+      
+
       .products:nth-child(even) {
-        margin-right: 10px;
-        margin-left: 10px;
+        margin-right: 35px;
+        margin-left: 35px;
+      }
+
+      .products {
+        max-width: 355px;
       }
 
     .social-list {
@@ -1153,6 +1162,14 @@ legend {
         margin-right: 15px;
         margin-left: 15px;
         
+      }
+
+      .field-search {
+        width: 100%;
+      }
+
+      .field-subscribe {
+        width: 100%;
       }
   }
 
