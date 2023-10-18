@@ -150,7 +150,7 @@
     opacity: 0.4;
     margin: 0 auto;
     margin-bottom: 27px;
-    
+    margin-top: 12px;
     }
   
     .all-trends {
@@ -227,7 +227,7 @@
     .news-block {
       display: inline-block;
       margin: auto;
-     
+      margin-bottom: 65px;
   
     }
 
@@ -294,7 +294,6 @@
     color: #0f0d0e;
     text-transform: uppercase;
     line-height: 1.2;
-    min-width: 330px;
     margin-top: 5px;
     margin-bottom: 35px;
   }
@@ -340,18 +339,19 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 44px;
-    position: relative;
   }
   
   .header-aside::after {
     content: "";
-    position: absolute;
     bottom: -12px;
     right: 100px;
     width: 66px;
     height: 4px;
     background: #e1d9bd;
     opacity: 0.4;
+    display: block;
+    margin: 0 auto;
+    margin-top: 12px;
   }
   
   .header-aside:nth-child( n + 2 ) {
@@ -368,7 +368,7 @@
   }
   
   .news-photo-aside {
-    min-width: 70px;
+    
     
     background-color: #f4f7f6;
   }
@@ -397,7 +397,7 @@
     font-size: 14px;
     text-transform: uppercase;
     line-height: 1.3;
-    min-width: 182px;
+  
     margin-top: 10px;
   }
   
@@ -419,10 +419,11 @@
   .search {
     margin-top: 30px;
     display: flex;
+    width: 100%;
   }
   
   .field-search {
-    min-width: 222px;
+    
     height: 48px;
     background-color: #f4f7f6;
     font-family: OpenSans;
@@ -466,7 +467,6 @@
   
   .field-subscribe {
     box-sizing: border-box;
-    width: 100%;
     height: 48px;
     background-color: #f4f7f6;
     padding-left: 18px;
@@ -480,13 +480,15 @@
     margin-bottom: 18px;
     width: 100%;
   }
+
+  
   
   .email-btn {
     height: 48px;
     background-color: #b59f5b;
     margin-bottom: 40px;
     border: none;
-    min-width: 270px;
+    
   }
   
   .subscribe-btn {
@@ -511,7 +513,7 @@
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 40px;
-    min-width: 100%;
+    
   }
   
   .tag-aside {
@@ -545,6 +547,8 @@
     color: #252424;
     position: relative;
     margin-top: 35px;
+    border-bottom: solid #eeeeee;
+    padding-bottom: 15px;
   }
   
   .theme-item:nth-child( n+2 ) {
@@ -561,16 +565,6 @@
     color: #b59f5b;
   }
   
-  .theme-item::after {
-    content: "";
-    position: absolute;
-    right: 0px;
-    bottom: -15px;
-    min-width: 270px;
-    height: 1px;
-    background: #eeeeee;
-  }
-
   .our-products {
     margin-top: 64px; 
     margin-left: auto;
@@ -615,6 +609,10 @@
     box-sizing: border-box;
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .product__img {
+    width: 100%;
   }
 
   .product__title {
@@ -669,7 +667,7 @@
 
   .product__button {
     height: 49px;
-    max-width: 140px;
+    
     background-color: #b59f5b;
     border: none;
     font-family: OpenSans;
@@ -1131,8 +1129,7 @@ legend {
     }
   
     .news-content {
-      padding-right: 15px;
-      padding-left: 15px;
+      
       flex-direction: column;
       box-sizing: border-box;
     }
@@ -1147,8 +1144,7 @@ legend {
     }
 
     .posts-aside {
-      padding-right: 15px;
-      padding-left: 15px;
+      
       margin-top: 44px;
       width: 100%;
       box-sizing: border-box;
@@ -1156,6 +1152,19 @@ legend {
 
     .search-section {
       display: flex;
+      width: 100%;
+    }
+
+    .search-group {
+      display: block;
+      width: 100%;
+    }
+
+    .subscribe {
+      width: 100%;
+    }
+
+    .email-btn {
       width: 100%;
     }
 
@@ -1173,10 +1182,18 @@ legend {
     
   }
 
-      .social-list {
-        
-        margin-right: 15px;
+  .product-body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+      .social-media {
         margin-left: 15px;
+        margin-right: 15px;
+      }
+
+
+      .social-list {
         width: 100%;
         
       }
