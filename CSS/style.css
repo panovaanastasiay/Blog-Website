@@ -157,6 +157,7 @@
       display: grid;
       gap: 1px;
       grid-template-columns: repeat(4, 1fr);
+      
     }
 
     .trends-items {
@@ -204,6 +205,7 @@
     }
 
     .trend-content {
+      
       border: 2px solid #907b45;
       padding-left: 30px;
       padding-right: 30px;
@@ -225,8 +227,7 @@
     }
 
     .news-block {
-      display: inline-block;
-      margin: auto;
+      
       margin-bottom: 65px;
   
     }
@@ -241,15 +242,9 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      
-      margin-right: 10px;
       }
 
-    .posts-aside {
-      width: 270px;
-      
-    }
-  
+    
   
 
   .news-item {
@@ -423,7 +418,7 @@
   }
   
   .field-search {
-    
+    box-sizing: border-box;
     height: 48px;
     background-color: #f4f7f6;
     font-family: OpenSans;
@@ -452,7 +447,7 @@
     background-size: 18px;
     background-position: center;
     height: 48px;
-    min-width: 50px;
+    width: 100%;
     border: none;
     margin-bottom: 30px;
   }
@@ -1018,23 +1013,22 @@ legend {
       
     }
 
+    .news-block {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    .posts-aside {
+      box-sizing: border-box;
+      padding-left: 35px;
+    }
   
     .news-item {
         flex-direction: column;
         
     }
 
-    .news-articles {
-      
-      display: inline-block;
-      padding-left: 35px;
-      padding-right: 35px;
-      }
-
-    .posts-aside {
-      padding-right: 35px;
-    }
-
+  
       .our-products {
         padding-left: 35px;
         padding-right: 35px;
@@ -1122,6 +1116,11 @@ legend {
       display: block;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .news-block {
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     .news-photo{
@@ -1216,6 +1215,14 @@ legend {
     .trends-items {
       width: 100%;
     }
+  }
+
+  @media (max-width: 640px) and (orientation: landscape) {
+
+    .all-trends {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
   }
 
   
