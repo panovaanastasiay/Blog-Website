@@ -220,7 +220,7 @@
         font-family: OpenSans;
         font-weight: 700;
         font-style: bold;
-        font-size: 20px;
+        font-size: 17px;
         text-transform: uppercase;
         color: white;
         
@@ -241,7 +241,6 @@
     .news-articles {
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
       }
 
     
@@ -352,6 +351,10 @@
   .header-aside:nth-child( n + 2 ) {
     margin-top: 35px;
   }
+
+  .posts-aside {
+    width: 270px;
+  }
   
   .news-aside {
     display: flex;
@@ -416,6 +419,10 @@
     display: flex;
     width: 100%;
   }
+
+  .search-group {
+    width: 100%;
+  }
   
   .field-search {
     box-sizing: border-box;
@@ -429,6 +436,8 @@
     opacity: 0.54;
     padding-left: 20px;
     border: none;
+    width: 100%;
+    
   }
   
   input {
@@ -447,7 +456,7 @@
     background-size: 18px;
     background-position: center;
     height: 48px;
-    width: 100%;
+    width: 48px;
     border: none;
     margin-bottom: 30px;
   }
@@ -483,6 +492,7 @@
     background-color: #b59f5b;
     margin-bottom: 40px;
     border: none;
+    width: 100%;
     
   }
   
@@ -938,7 +948,7 @@ legend {
   }
 
   .news-articles {
-    
+    width: calc(100% - (270px + 120px));
     margin-right: 120px;
   }
 
@@ -1018,9 +1028,14 @@ legend {
       padding-right: 35px;
     }
 
+
+    .news-articles {
+      width: calc(100% - (270px + 35px));
+    }
+
     .posts-aside {
       box-sizing: border-box;
-      padding-left: 35px;
+      margin-left: 35px;
     }
   
     .news-item {
@@ -1057,6 +1072,10 @@ legend {
 
     .all-trends {
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trend-content {
+      box-sizing: border-box;
     }
   }
 
