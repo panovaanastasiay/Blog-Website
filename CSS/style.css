@@ -263,17 +263,16 @@
   
   .theme-tags {
     display: flex;
+    flex-wrap: wrap;
     font-family: OpenSans;
     font-weight: 700;
-    font-style: bold;
     font-size: 14px;
     color: #b59f5b;
     text-transform: uppercase;
-    
   }
   
-  .tag-list:nth-child(n + 2) {
-    margin-left: 20px;
+  .tag-list:nth-child(n + 1) {
+    margin-right: 20px;
   }
   
   .tag-list:hover {
